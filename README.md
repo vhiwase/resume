@@ -77,3 +77,7 @@ python build-letter-pdf.py Vaibhav-Hiwase-Cover-Letter.md "$env:TEMP\letter.html
 **PDFs**
 
 - Rebuilt both PDFs in Segoe UI. The resume is still three pages, and the cover letter is still one page.
+
+**Repository**
+
+- Removed `RESUME.png`, an October 2020 resume image whose name clashed with `Resume.png` on Windows. It is still in the Git history.
