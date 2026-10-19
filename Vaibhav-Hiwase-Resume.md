@@ -14,13 +14,15 @@ AI/ML engineer and technical lead with 8+ years building LLM applications and da
 
 ## Technical Skills
 
-- **Palantir Foundry & AIP:** Ontology modeling (object types, link types, Action Types), AIP Agents & Agent Studio, AIP Logic, AIP Evals, Workshop, Pipeline Builder, Code Repositories, Functions (Python/TypeScript), Data Connection, Automate, Marketplace, Fusion Sheets, Developer Console, Compass API, multi-environment release management
-- **AI, LLM & Gen-AI:** OpenAI, Claude, Llama, VLLM, LangChain, LlamaIndex, RAG, embeddings, vector search (FAISS, Pinecone, Weaviate, Chroma), agentic workflows, Model Context Protocol (MCP), LLM A/B testing, reinforcement learning
+- **Palantir AIP:** AIP Agent Studio, AIP Logic, AIP Evals, Automate, Foundry ML (models, inference), AI FDE (AI-assisted development)
+- **Foundry Ontology & Apps:** Ontology modeling (object, link and action types, interfaces, function-backed actions), Functions (Python/TypeScript), OSDK & Developer Console, Compass API, Workshop, Slate, Contour, Fusion Sheets
+- **Foundry Data & DevOps:** Pipeline Builder, Code Repositories & Workspaces (Python transforms), Data Connection (streaming, CDC), Media Sets, Restricted Views & Markings, Global Branching, Marketplace & DevOps, multi-environment releases
+- **AI, LLM & Gen-AI:** OpenAI, Claude, Gemini, Llama, VLLM, LangChain, LlamaIndex, RAG, embeddings, vector search (FAISS, Pinecone, Weaviate, Chroma), agentic workflows, Model Context Protocol (MCP), LLM A/B testing, reinforcement learning
 - **LLM Application Engineering:** conversational agents, RAG, intent classification and routing, entity extraction, tool/function calling, guardrails, response and citation validation, hallucination mitigation, prompt optimisation, streaming responses, token and cost tracking
 - **LLM Evaluation:** LLM-as-a-Judge design and judge–expert alignment, critique shadowing, binary pass/fail rubrics, eval dataset curation, error analysis, regression harnesses, release gating
 - **Architecture & Systems:** microservice decomposition, event-driven and asynchronous processing, message brokers and queues (Redis, AWS SQS, RQ), workflow orchestration (AWS Step Functions, Foundry Automate), parallel and chunked processing, autoscaling (KEDA), API gateway and auth (Azure APIM, OAuth 2.0 / OpenID Connect)
 - **Computer Vision & Document AI:** Azure Form Recognizer, Azure Custom Vision, Mask R-CNN, layout and table detection, document parsing, image classification, blur and tamper detection
-- **Data Engineering:** Spark, PySpark, Polars, Delta Lake, MLflow, Databricks, Unity Catalog, DBFS, incremental pipelines, scalable ETL design, governance and lineage, cluster management
+- **Data Engineering:** Spark, PySpark, Polars, DuckDB, Delta Lake, MLflow, Databricks, Unity Catalog, DBFS, incremental pipelines, schema evolution, scalable ETL design, governance and lineage, cluster management
 - **Programming:** Python (Advanced), PySpark, Polars, Pandas, NumPy, PyTorch, Scikit-learn, Pydantic, TypeScript, SQL
 - **Cloud & MLOps:** Azure (AKS, ML Studio, Key Vault, APIM, Container Apps), AWS (SQS, Step Functions, S3), Kubernetes, Docker, TorchServe, Ollama, GitHub Actions
 - **Databases:** MySQL, PostgreSQL, Redis (caching, queues, message broker), vector DBs (FAISS, Pinecone, Chroma, Weaviate)
@@ -34,19 +36,37 @@ AI/ML engineer and technical lead with 8+ years building LLM applications and da
 ### Lead AI/ML Engineer — Palantir Foundry & AIP
 **[Innovecture](https://www.innovect.com/)** (Client: [Aptia Group](https://www.aptia-group.com/)) · Remote, India · Dec 2025 – Present
 
-- Built and own Aptia's employee benefits AI assistant on Palantir AIP: an **Agent Studio** agent composed of **16 Python Foundry Functions**, answering questions on plans, coverage, dependents, ID cards and HSA/FSA in plain language. Live across Dev, UAT, Stage, Prod and Internal-Prod.
-- Designed the intent-routing layer in **AIP Logic**. Each question is classified into one of ~14 paths and answered directly from the **Ontology** where the data exists; the LLM and RAG over approved benefit resources handle only the remainder, which keeps common answers deterministic and traceable.
-- Own the release-quality gate: **15+ AIP Evals suites** covering the intent classifier, entity extractors and response validators across an **800+ question** regression set. Every suite must hold above a **90% pass rate** before a release is promoted.
-- Aligned the **LLM-as-a-Judge** scorers to benefits domain experts through critique shadowing, with judges written as versioned **Foundry Functions** and **PySpark** pipelines writing each run back to the Ontology as queryable regression history.
-- Shipped safety guardrails as **AIP Logic** functions covering legal, medical, tax and financial advice, running at **p95 under 1.6s across 27k+ calls**, with automatic escalation to a human agent. Added citation and response validators that check each answer against the employee's own plan data before delivery.
-- Built self-service evaluation apps in **Foundry Workshop** so the benefits team authors test questions and reviews AI scores without engineering. Test cases are seeded from **Fusion Sheets** and materialised as Ontology objects through **Pipeline Builder**.
-- Consolidated logs from **21 Foundry Functions** into a single hourly-refreshed timeline of **9M+ events** with per-function error and token-cost breakdowns, then used it to find one fallback agent absorbing **75% of AI spend** and re-route common questions away from it, cutting the cost of a typical question by roughly **95%**.
-- Automated dependent-eligibility document verification on **Foundry Automate** and **AIP Logic**: 16 reusable checks across 20 document types, with results returned to the core benefits platform over **AWS SQS**. **~37,000 decisions** processed at roughly a minute each.
-- Built an environment comparison tool on the **Compass API** that inventories and diffs all five Foundry environments across 36 resource types, flagging configuration drift, missing resources, failed dataset builds and unindexed object types in a shareable HTML report. Covered by 158 unit tests.
-- Modelled the **Ontology** behind both workflows (object types, link types, Action Types) and migrated **~80 Action Types** to a new ontology without breaking downstream consumers.
-- Packaged the pipelines and Functions as a **Foundry Marketplace** product that resolves its own resource IDs at install time through the **Compass API**, so it installs into any environment unchanged.
-- Rebuilt Salesforce, Pendo, Postgres and S3 ingests as incremental runs on **Polars**, so each build reads only what changed.
-- Run releases as **Platform Admin and Platform Approver**, promoting code, ontology and app branches Dev → UAT → Stage → Prod through reviewed proposals, and handle L3 production support.
+Build a GenAI benefits assistant, its LLM evaluation framework and automated document-verification workflows, and serve as Platform Admin with L3 production support across 5 environments (126 of 140 change proposals merged).
+
+**GenAI Benefits Assistant**
+- Raised the coverage answer engine's evaluation pass rate from **68.9% to 97.9%** (238 cases) by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, which also cut prompt tokens 28% and worst-case latency 48%.
+- Achieved a **99.4% pass rate** (167 of 168 AIP Evals runs) on a 26-intent LLM classifier by rebuilding its routing around priority rules for unsupported languages, plan mentions, follow-ups, multi-plan questions and past or future coverage.
+- Made answers traceable and reduced hallucination by returning cited source IDs in structured responses, adding grounding rules and an 11-point self-check, and removing duplicate retrieved pages from the prompt (10 copies to 1).
+
+**LLM Evaluation & Quality**
+- Designed an evaluation framework grounded in real plan documents, with a 64-cell test matrix and an LLM judge required to agree with experts at least 90% of the time, and shipped a **532-case regression suite** (388 cases written by business users).
+- Built an embedding-based RAG retrieval pipeline matching 202 test queries to participants and pages, cutting comparisons **99.9%** (33M to 36K) by de-duplicating 165,750 page rows to 180 unique pages.
+- Identified **85 content gaps** across 182 business acceptance-test queries by building a keyword matcher that behaves identically in every environment, and removed a matching tier that caused 60 false matches.
+- Shipped evaluation-run analytics with new Eval Run and Test Case object types that track pass rate, tokens, compute and latency per run, and added a Helpfulness criterion to the LLM judge with no regressions.
+
+**Document Verification Automation**
+- Prevented verification requests from stalling on pending participant data by building a readiness gate (status field, AIP Logic lookup and 15-minute re-check automation) across **22 automations**, with a 24-hour fallback to manual review.
+- Replaced silent failures with a clear result, reason and audit marker for unsupported document types and AI-excluded clients, added end-to-end structured failure reasons and pinned function versions across all actions.
+- Enabled testing of **24 of 36** previously untested file-type and entity-type combinations by adding a Clone Verification Request action that re-tests documents without re-uploading, exposing a whitespace bug in entity-type parsing.
+- Built an end-to-end load-testing suite that triggers real actions through the Foundry Ontology API and verifies delivery to AWS SQS, measuring throughput, **p50–p99 latency**, error rate and pipeline time from 1× to 250× synthetic load.
+
+**Data Engineering & Pipelines**
+- Rebuilt a failing Postgres sync as an incremental Spark join in Pipeline Builder, verified row for row on **8M+ rows**.
+- Resolved recurring Pendo ingestion failures, with builds now finishing in **14.5 minutes** and no memory errors, by adding schema evolution with typed nulls, processing one day at a time and removing about 300 lines of duplicate code.
+- Corrected a **nearly 3×** overcount of dependent-coverage objects and removed 1,170 duplicate-key rows by sourcing the model from Foundry-computed data, preserving row-level security through a restricted view with no orphaned links.
+- Stabilized the assistant's monitoring: fixed a streaming backfill bug, rebuilt enrichment, error and token-usage transforms on a shared timeline, and grew log-parser coverage from 16 to 21, storing user text only as SHA-256 fingerprints.
+
+**Platform Engineering & DevOps**
+- Built a deployment validator, covered by **158 unit tests**, that compares Foundry resources across 5 environments and 36 resource types and shows likely matches, field-level differences and duplicates in an interactive HTML dashboard.
+- Made Marketplace products deployable to every environment by replacing hard-coded resource IDs with Compass paths, fixing packaging errors and removing a column dependency that broke Stage builds, verified on **22.7M rows**.
+- Implemented platform-health and sync-failure monitoring for builds, search indexing and schema failures, with a Python reporting function that sends automated email alerts on separate production and non-production schedules.
+- Restored the development ontology by recreating **70+ of 107** action types, including full create, edit and delete sets.
+- Flagged two data-exposure risks and designed evaluation pipelines to store fingerprints instead of document content.
 
 ### Technical Lead — ML & AI
 **[TechnoMile](https://technomile.com/)** · Remote, India · Sept 2023 – Nov 2025
@@ -85,11 +105,6 @@ Data science and ML engineering for enterprise clients: document intelligence, p
 ---
 
 ## Projects
-
-**Employee Benefits AI Platform on Palantir Foundry — Aptia Group**
-- **Evaluation platform** — continuous scoring for the intent classifier, 4 entity extractors and 4 response validators. Test cases are modelled as Ontology objects linked to the participant, plan and source resource page each answer must be grounded in; judges are versioned Foundry Functions; every run is kept as a queryable dataset so releases can be compared against one another.
-- **Ontology Comparison Tool** — inventories all five Foundry environments through the **Compass API** and diffs them ahead of a release, flagging missing resources, configuration drift, failed dataset builds and unindexed object types. 36 resource types parsed, interactive HTML report with a visual map of resource relationships, 158 unit tests.
-- **AI monitoring and cost reporting** — one timeline across 21 agent Functions showing error types, latency and token cost by model, user and day.
 
 **Contract Document AI — TechnoMile**
 - Trained a layout detection model on **Azure Custom Vision** to find CLIN tables in contract PDFs: **94%** accuracy on 50 annotated documents, rising above **98%** after scaling the training set to 264 with automated retraining.
