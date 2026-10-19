@@ -36,35 +36,35 @@ AI/ML engineer and technical lead with 8+ years building LLM applications and da
 ### Lead AI/ML Engineer — Palantir Foundry & AIP
 **[Innovecture](https://www.innovect.com/)** (Client: [Aptia Group](https://www.aptia-group.com/)) · Remote, India · Dec 2025 – Present
 
-Build a GenAI benefits assistant, its LLM evaluation framework and automated document-verification workflows, and serve as Platform Admin with L3 production support across 5 environments (126 of 140 change proposals merged).
+Build a GenAI benefits assistant, its LLM evaluation framework and automated document-verification workflows, and serve as Platform Admin with L3 production support across 5 environments.
 
 **GenAI Benefits Assistant**
-- Raised the coverage answer engine's evaluation pass rate from **68.9% to 97.9%** (238 cases) by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, which also cut prompt tokens 28% and worst-case latency 48%.
-- Achieved a **99.4% pass rate** (167 of 168 AIP Evals runs) on a 26-intent LLM classifier by rebuilding its routing around priority rules for unsupported languages, plan mentions, follow-ups, multi-plan questions and past or future coverage.
-- Made answers traceable and reduced hallucination by returning cited source IDs in structured responses, adding grounding rules and an 11-point self-check, and removing duplicate retrieved pages from the prompt (10 copies to 1).
+- Raised the coverage answer engine's evaluation pass rate from **68.9% to 97.9%** by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, cutting prompt tokens 28% and worst-case latency 48%.
+- Achieved a **99.4% pass rate** in AIP Evals for a 26-intent LLM classifier by rebuilding its routing around clear priority rules, and tested it against about 95 real production queries.
+- Made answers traceable to cited sources and reduced hallucination with grounding rules and an 11-point self-check.
 
 **LLM Evaluation & Quality**
-- Designed an evaluation framework grounded in real plan documents, with a 64-cell test matrix and an LLM judge required to agree with experts at least 90% of the time, and shipped a **532-case regression suite** (388 cases written by business users).
-- Built an embedding-based RAG retrieval pipeline matching 202 test queries to participants and pages, cutting comparisons **99.9%** (33M to 36K) by de-duplicating 165,750 page rows to 180 unique pages.
-- Identified **85 content gaps** across 182 business acceptance-test queries by building a keyword matcher that behaves identically in every environment, and removed a matching tier that caused 60 false matches.
-- Shipped evaluation-run analytics with new Eval Run and Test Case object types that track pass rate, tokens, compute and latency per run, and added a Helpfulness criterion to the LLM judge with no regressions.
+- Designed an evaluation framework from real plan documents and shipped it as a **532-case regression suite** (388 cases written by business users), scored by an LLM judge that must agree with experts at least 90% of the time.
+- Built an embedding-based RAG pipeline that maps test queries to the right participant and pages, cutting comparisons **99.9%** by de-duplicating 165,750 page rows into 180 unique pages.
+- Identified **85 content gaps** across 182 business acceptance-test queries with a keyword matcher that works the same in every environment, and removed a matching tier that caused 60 false matches.
+- Shipped evaluation-run analytics that track pass rate, tokens, compute and latency per run, and added a Helpfulness criterion to the LLM judge with no regressions.
 
 **Document Verification Automation**
-- Prevented verification requests from stalling on pending participant data by building a readiness gate (status field, AIP Logic lookup and 15-minute re-check automation) across **22 automations**, with a 24-hour fallback to manual review.
-- Replaced silent failures with a clear result, reason and audit marker for unsupported document types and AI-excluded clients, added end-to-end structured failure reasons and pinned function versions across all actions.
-- Enabled testing of **24 of 36** previously untested file-type and entity-type combinations by adding a Clone Verification Request action that re-tests documents without re-uploading, exposing a whitespace bug in entity-type parsing.
-- Built an end-to-end load-testing suite that triggers real actions through the Foundry Ontology API and verifies delivery to AWS SQS, measuring throughput, **p50–p99 latency**, error rate and pipeline time from 1× to 250× synthetic load.
+- Stopped verification requests from stalling when participant data was not ready by adding a readiness gate to **22 automations** that re-checks every 15 minutes and hands off to manual review after 24 hours.
+- Replaced silent failures with clear, auditable outcomes for unsupported documents and AI-excluded clients.
+- Enabled testing of **24 of 36** previously untested file-type and entity-type combinations with a Clone Verification Request action that re-tests documents without re-uploading.
+- Built an end-to-end load-testing suite that measures throughput, **p50–p99 latency** and error rate at 1× to 250× load, from Foundry Ontology API actions through AWS SQS delivery.
 
 **Data Engineering & Pipelines**
 - Rebuilt a failing Postgres sync as an incremental Spark join in Pipeline Builder, verified row for row on **8M+ rows**.
-- Resolved recurring Pendo ingestion failures, with builds now finishing in **14.5 minutes** and no memory errors, by adding schema evolution with typed nulls, processing one day at a time and removing about 300 lines of duplicate code.
-- Corrected a **nearly 3×** overcount of dependent-coverage objects and removed 1,170 duplicate-key rows by sourcing the model from Foundry-computed data, preserving row-level security through a restricted view with no orphaned links.
-- Stabilized the assistant's monitoring: fixed a streaming backfill bug, rebuilt enrichment, error and token-usage transforms on a shared timeline, and grew log-parser coverage from 16 to 21, storing user text only as SHA-256 fingerprints.
+- Fixed recurring Pendo memory and schema failures with day-by-day processing and schema evolution (**14.5-minute builds**).
+- Corrected a **nearly 3×** overcount in the dependent-coverage data model by switching it to Foundry-computed data, keeping row-level security in place through a restricted view.
+- Stabilized the assistant's monitoring, grew it from 16 to 21 log parsers and stored user text only as SHA-256 hashes.
 
 **Platform Engineering & DevOps**
-- Built a deployment validator, covered by **158 unit tests**, that compares Foundry resources across 5 environments and 36 resource types and shows likely matches, field-level differences and duplicates in an interactive HTML dashboard.
-- Made Marketplace products deployable to every environment by replacing hard-coded resource IDs with Compass paths, fixing packaging errors and removing a column dependency that broke Stage builds, verified on **22.7M rows**.
-- Implemented platform-health and sync-failure monitoring for builds, search indexing and schema failures, with a Python reporting function that sends automated email alerts on separate production and non-production schedules.
+- Built a deployment validator, backed by **158 unit tests**, that compares 36 Foundry resource types across 5 environments and shows the differences in an interactive HTML dashboard.
+- Made Marketplace products deploy cleanly to every environment by replacing hard-coded resource IDs with Compass paths and removing a dependency that broke Stage builds (row counts verified on **22.7M rows**).
+- Implemented platform-health and sync-failure monitoring with separate production and non-production email alerts.
 - Restored the development ontology by recreating **70+ of 107** action types, including full create, edit and delete sets.
 - Flagged two data-exposure risks and designed evaluation pipelines to store fingerprints instead of document content.
 
