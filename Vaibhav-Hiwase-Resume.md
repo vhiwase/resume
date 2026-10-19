@@ -36,37 +36,37 @@ AI/ML engineer and technical lead with 8+ years building LLM applications and da
 ### Lead AI/ML Engineer — Palantir Foundry & AIP
 **[Innovecture](https://www.innovect.com/)** (Client: [Aptia Group](https://www.aptia-group.com/)) · Remote, India · Dec 2025 – Present
 
-Build a GenAI benefits assistant, its LLM evaluation framework and automated document-verification workflows, and serve as Platform Admin with L3 production support across 5 environments.
+Build an AI assistant that answers employees' benefits questions, automated checks for the documents they submit and a framework that tests the AI's answers. Serve as Platform Admin, providing L3 (top-level) production support across 5 environments.
 
 **GenAI Benefits Assistant**
-- Raised the coverage answer engine's evaluation pass rate from **68.9% to 97.9%** by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, cutting prompt tokens 28% and worst-case latency 48%.
-- Achieved a **99.4% pass rate** in AIP Evals for a 26-intent LLM classifier by rebuilding its routing around clear priority rules, and tested it against about 95 real production queries.
-- Made answers traceable to cited sources and reduced hallucination with grounding rules and an 11-point self-check.
+- Raised coverage-answer accuracy from **68.9% to 97.9%** by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, which also cut token cost 28% and worst-case response time 48%.
+- Reached **99.4%** routing accuracy by rebuilding the AI classifier that sorts each question into one of 26 topics.
+- Reduced made-up answers (hallucinations) in the assistant's document-based (RAG) replies by having it cite its sources and run an 11-point self-check before answering.
 
-**LLM Evaluation & Quality**
-- Designed an evaluation framework from real plan documents and shipped it as a **532-case regression suite** (388 cases written by business users), scored by an LLM judge that must agree with experts at least 90% of the time.
-- Built an embedding-based RAG pipeline that maps test queries to the right participant and pages, cutting comparisons **99.9%** by de-duplicating 165,750 page rows into 180 unique pages.
-- Identified **85 content gaps** across 182 business acceptance-test queries with a keyword matcher that works the same in every environment, and removed a matching tier that caused 60 false matches.
-- Shipped evaluation-run analytics that track pass rate, tokens, compute and latency per run, and added a Helpfulness criterion to the LLM judge with no regressions.
+**AI Evaluation & Testing**
+- Designed a **532-question** test suite from real plan documents, including 388 questions written by business users, with an AI judge that must agree with human experts at least 90% of the time.
+- Built an AI document search (embedding-based RAG) that matches each test question to the right person and pages, and cut its workload **99.9%** by removing duplicate pages.
+- Found **85 of 182** business test questions that the source documents could not answer, using a keyword matcher, and removed a faulty matching step that produced 60 false matches.
+- Added analytics for accuracy, cost and speed on every test run, and a Helpfulness score that broke no existing tests.
 
 **Document Verification Automation**
-- Stopped verification requests from stalling when participant data was not ready by adding a readiness gate to **22 automations** that re-checks every 15 minutes and hands off to manual review after 24 hours.
-- Replaced silent failures with clear, auditable outcomes for unsupported documents and AI-excluded clients.
-- Enabled testing of **24 of 36** previously untested file-type and entity-type combinations with a Clone Verification Request action that re-tests documents without re-uploading.
-- Built an end-to-end load-testing suite that measures throughput, **p50–p99 latency** and error rate at 1× to 250× load, from Foundry Ontology API actions through AWS SQS delivery.
+- Stopped verification requests from getting stuck when a person's data was not yet available, with a readiness check across **22 automations** that retries every 15 minutes and escalates to manual review after 24 hours.
+- Replaced silent failures with a clear, auditable result for unsupported documents and clients excluded from AI review.
+- Made **24 of 36** untested document scenarios testable with a clone action that re-runs checks without re-uploading.
+- Built end-to-end load tests that measure response times (**p50–p99**), throughput and error rates at up to 250 times baseline load, from Foundry actions to AWS SQS delivery.
 
 **Data Engineering & Pipelines**
-- Rebuilt a failing Postgres sync as an incremental Spark join in Pipeline Builder, verified row for row on **8M+ rows**.
-- Fixed recurring Pendo memory and schema failures with day-by-day processing and schema evolution (**14.5-minute builds**).
-- Corrected a **nearly 3×** overcount in the dependent-coverage data model by switching it to Foundry-computed data, keeping row-level security in place through a restricted view.
-- Stabilized the assistant's monitoring, grew it from 16 to 21 log parsers and stored user text only as SHA-256 hashes.
+- Replaced a failing Postgres data feed with an incremental Spark pipeline that matched the source exactly on **8M+ rows**.
+- Fixed recurring crashes in the Pendo analytics feed, which now finishes in **14.5 minutes**, by processing one day at a time and adapting to new columns automatically.
+- Corrected dependent-coverage counts that were **nearly three times** too high by switching to Foundry-calculated data.
+- Repaired and expanded the assistant's monitoring from 16 to 21 log sources, storing user messages only in hashed form.
 
 **Platform Engineering & DevOps**
-- Built a deployment validator, backed by **158 unit tests**, that compares 36 Foundry resource types across 5 environments and shows the differences in an interactive HTML dashboard.
-- Made Marketplace products deploy cleanly to every environment by replacing hard-coded resource IDs with Compass paths and removing a dependency that broke Stage builds (row counts verified on **22.7M rows**).
-- Implemented platform-health and sync-failure monitoring with separate production and non-production email alerts.
-- Restored the development ontology by recreating **70+ of 107** action types, including full create, edit and delete sets.
-- Flagged two data-exposure risks and designed evaluation pipelines to store fingerprints instead of document content.
+- Built a deployment-checking tool, backed by **158 unit tests**, that compares 36 types of Foundry resources across 5 environments and highlights differences in an interactive dashboard.
+- Made Foundry Marketplace packages install cleanly in every environment by removing hard-coded IDs and a dependency that broke the Stage environment (verified on **22.7M rows**).
+- Set up automatic email alerts for failed builds, data syncs and search indexing, with separate alerts for production.
+- Restored **70+ of 107** user actions, such as create, edit and delete, in the development environment.
+- Flagged two data-privacy risks and designed test pipelines to store document fingerprints instead of document content.
 
 ### Technical Lead — ML & AI
 **[TechnoMile](https://technomile.com/)** · Remote, India · Sept 2023 – Nov 2025

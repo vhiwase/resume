@@ -6,7 +6,7 @@ Nagpur, India · [(+91) 8999382164](tel:+918999382164) · [hiwase.vaibhav@gmail.
 
 ---
 
-25 August 2026
+19 October 2026
 
 > [Hiring Manager Name]
 > [Company Name]
@@ -14,15 +14,17 @@ Nagpur, India · [(+91) 8999382164](tel:+918999382164) · [hiwase.vaibhav@gmail.
 
 Dear [Hiring Manager],
 
-I'm writing to apply for the [Role Title] role at [Company]. I currently own two production AI systems end to end on Palantir Foundry and AIP, and what I would bring to [Company] is less about any single platform than about a specific discipline: getting LLM systems past the demo stage and keeping them dependable once real people rely on them every day.
+I am applying for the [Role Title] role at [Company]. I own two production AI systems on Palantir Foundry and AIP, and I bring a specific discipline: taking LLM systems past the demo stage and keeping them dependable once people rely on them every day. I measure every change before and after it ships.
 
-At Aptia Group I built and own an employee benefits assistant that answers questions on plans, coverage, dependents, ID cards and HSA/FSA in plain language — an Agent Studio agent composed of 16 Foundry Functions, live across five environments. The design decision I would point to first is the routing. An intent classifier sends each question down one of roughly 14 paths and answers it directly from the Ontology wherever the data already exists, so the LLM is invoked only where it genuinely has to be. That keeps common answers deterministic and traceable. It also proved its worth commercially: after I merged logs from 21 Functions into a single timeline, the data showed one fallback agent absorbing 75% of our AI spend, and re-routing common questions away from it cut the cost of a typical question by roughly 95%.
+At Aptia Group, I build a GenAI assistant that answers employees' benefits questions. I raised the accuracy of its coverage answers from 68.9% to 97.9% by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash. The change also cut token cost by 28% and worst-case response time by 48%. I rebuilt the classifier that sorts each question into one of 26 topics, which now routes 99.4% of test questions correctly, and reduced made-up answers by having the assistant cite its sources and run an 11-point self-check.
 
-The part of this work I care most about is evaluation. I own 15+ evaluation suites over an 800+ question regression set, scored by LLM judges aligned to benefits domain experts through critique shadowing rather than tuned against an invented rubric. Every suite has to hold above a 90% pass rate before a release is promoted. I also built the Workshop apps that let the benefits team author their own test questions and review AI scores directly, because the people who define what "correct" means should own that standard rather than engineering.
+Evaluation is the part of this work I care about most. I designed a 532-question test suite from real plan documents, with an AI judge that must agree with human experts at least 90% of the time. Business users wrote 388 of those questions, because the people who define what "correct" means should own that standard. A separate check found 85 of 182 business test questions that the source documents could not answer.
 
-Alongside the products I run the platform: modelling the Ontology behind both workflows, migrating ~80 Action Types without breaking downstream consumers, packaging pipelines as a Marketplace product that installs into any environment unchanged, and approving promotions from Dev through to Production as Platform Admin. Before Foundry I led contract-document AI at TechnoMile, raising extraction accuracy from 58% to 90% across seven domains and decomposing a monolithic service into four orchestrated services that ran 40% faster.
+Beyond the assistant, I automate document verification and run the platform. I added a readiness check to 22 automations so requests no longer get stuck when a person's data is not yet available. I also built load tests that measure response times at up to 250 times baseline load, and a deployment-checking tool, backed by 158 unit tests, that compares resources across five environments. As Platform Admin, I provide L3 production support.
 
-I would welcome the chance to talk about [specific team, product or problem at Company] and where this experience would be most useful. Thank you for your time and consideration.
+Before Foundry, I led contract-document AI at TechnoMile. I raised extraction accuracy from 58% to 90% across seven contract domains and split one large service into four smaller services that ran 40% faster.
+
+I would welcome the chance to discuss [specific team, product or problem at Company] and where my experience would help most. Thank you for your time and consideration.
 
 Sincerely,
 
