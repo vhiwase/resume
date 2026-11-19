@@ -11,8 +11,8 @@ photo_path = sys.argv[3] if len(sys.argv) > 3 else None
 src = pathlib.Path(md_path).read_text(encoding="utf-8")
 
 DATE_RE = re.compile(
-    r"^(.*?)\s*·\s*((?:[A-Z][a-z]{2,4}\.?\s*)?\d{4}\s*[–-]\s*"
-    r"(?:Present|(?:[A-Z][a-z]{2,4}\.?\s*)?\d{4}))\s*$"
+    r"^(.*?)\s*·\s*((?:[A-Z][a-z]{2,8}\.?\s*)?\d{4}\s*[–-]\s*"
+    r"(?:Present|(?:[A-Z][a-z]{2,8}\.?\s*)?\d{4}))\s*$"
 )
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 
@@ -65,7 +65,11 @@ for raw in src.split("\n"):
         close_list()
         continue
 
-    if line.startswith("### "):
+    if line.startswith("#### "):
+        close_list()
+        body.append(f'<p class="projname"><strong>{inline(line[5:])}</strong></p>')
+        prev = "p"
+    elif line.startswith("### "):
         close_list()
         title, dates = split_dates(line[4:])
         body.append(
@@ -155,7 +159,7 @@ p.contact { margin: 0; font-size: 8.4pt; color: #5f6368; }
 
 h2 {
   font-size: 8.6pt; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 1.25px; color: #1a73e8;
+  letter-spacing: .5px; color: #1a73e8;
   margin: 13px 0 6px 0; padding-bottom: 3px;
   border-bottom: 1px solid #dadce0;
   page-break-after: avoid; break-after: avoid;

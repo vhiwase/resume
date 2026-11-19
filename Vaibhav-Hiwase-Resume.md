@@ -1,127 +1,105 @@
 # Vaibhav Hiwase
 
-AI/ML Engineer & Technical Lead — LLM Applications, Evaluation & Production AI Platforms
+Lead Palantir Foundry & AIP Engineer — Ontology, Pipelines, AIP Agents, RAG/OAG
 
-Nagpur, India · [(+91) 8999382164](tel:+918999382164) · [hiwase.vaibhav@gmail.com](mailto:hiwase.vaibhav@gmail.com) · [linkedin.com/in/vaibhav-hiwase](https://www.linkedin.com/in/vaibhav-hiwase)
+Nagpur, India · Open to relocation to Abu Dhabi, UAE · [(+91) 8999382164](tel:+918999382164) · [hiwase.vaibhav@gmail.com](mailto:hiwase.vaibhav@gmail.com) · [linkedin.com/in/vaibhav-hiwase](https://www.linkedin.com/in/vaibhav-hiwase)
 
 ---
 
 ## Professional Summary
 
-AI/ML engineer and technical lead with 8+ years building LLM applications and data platforms that run in production. Currently own two production AI systems on Palantir Foundry & AIP: an employee benefits assistant built on Agent Studio, AIP Logic and Foundry Functions, and an automated document-verification workflow on Foundry Automate, along with the AIP Evals suites, guardrails, observability and Marketplace release tooling behind them. Earlier work covers contract-document AI with OpenAI, Claude and Llama models, distributed service architecture on AWS Step Functions and Redis, Databricks pipelines, and Kubernetes deployments on Azure and AWS.
+Palantir Foundry & AIP engineer with 8+ years in data and AI engineering. As Lead AI/ML Engineer and Platform Admin at Aptia Group, own two production AIP solutions end to end: an employee benefits copilot on AIP Agent Studio and AIP Logic, grounded with RAG and Ontology-Augmented Generation (OAG), and a document-verification decision workflow on Automate, plus the AIP Evals suites and pipelines behind them. Strong in Python, PySpark, SQL and data modelling, and work directly with non-technical business users. Before Foundry: 7 years of LLM, RAG, document AI and data pipelines on AWS, Azure and Databricks.
 
 ---
 
 ## Technical Skills
 
-- **Palantir AIP:** AIP Agent Studio, AIP Logic, AIP Evals, Automate, Foundry ML (models, inference), AI FDE (AI-assisted development)
-- **Foundry Ontology & Apps:** Ontology modeling (object, link and action types, interfaces, function-backed actions), Functions (Python/TypeScript), OSDK & Developer Console, Compass API, Workshop, Slate, Contour, Fusion Sheets
-- **Foundry Data & DevOps:** Pipeline Builder, Code Repositories & Workspaces (Python transforms), Data Connection (streaming, CDC), Media Sets, Restricted Views & Markings, Global Branching, Marketplace & DevOps, multi-environment releases
-- **AI, LLM & Gen-AI:** OpenAI, Claude, Gemini, Llama, VLLM, LangChain, LlamaIndex, RAG, embeddings, vector search (FAISS, Pinecone, Weaviate, Chroma), agentic workflows, Model Context Protocol (MCP), LLM A/B testing, reinforcement learning
-- **LLM Application Engineering:** conversational agents, RAG, intent classification and routing, entity extraction, tool/function calling, guardrails, response and citation validation, hallucination mitigation, prompt optimisation, streaming responses, token and cost tracking
-- **LLM Evaluation:** LLM-as-a-Judge design and judge–expert alignment, critique shadowing, binary pass/fail rubrics, eval dataset curation, error analysis, regression harnesses, release gating
-- **Architecture & Systems:** microservice decomposition, event-driven and asynchronous processing, message brokers and queues (Redis, AWS SQS, RQ), workflow orchestration (AWS Step Functions, Foundry Automate), parallel and chunked processing, autoscaling (KEDA), API gateway and auth (Azure APIM, OAuth 2.0 / OpenID Connect)
-- **Computer Vision & Document AI:** Azure Form Recognizer, Azure Custom Vision, Mask R-CNN, layout and table detection, document parsing, image classification, blur and tamper detection
-- **Data Engineering:** Spark, PySpark, Polars, DuckDB, Delta Lake, MLflow, Databricks, Unity Catalog, DBFS, incremental pipelines, schema evolution, scalable ETL design, governance and lineage, cluster management
-- **Programming:** Python (Advanced), PySpark, Polars, Pandas, NumPy, PyTorch, Scikit-learn, Pydantic, TypeScript, SQL
-- **Cloud & MLOps:** Azure (AKS, ML Studio, Key Vault, APIM, Container Apps), AWS (SQS, Step Functions, S3), Kubernetes, Docker, TorchServe, Ollama, GitHub Actions
-- **Databases:** MySQL, PostgreSQL, Redis (caching, queues, message broker), vector DBs (FAISS, Pinecone, Chroma, Weaviate)
-- **Observability & Monitoring:** Arize Phoenix (LLM & pipeline observability), RQ Dashboard, Opik by Comet
-- **Tools:** Git, Docker, Jupyter Notebook, VS Code, Cursor, Antigravity
+- **Palantir AIP:** RAG and Ontology-Augmented Generation (OAG), AIP Agent Studio (copilots), AIP Logic (intent routing, decision support), AIP Evals, Automate (workflow automation), Foundry ML (models, inference), AI FDE
+- **Foundry Ontology & Apps:** Ontology design and data modelling (object, link and action types, interfaces, function-backed actions), Functions (Python/TypeScript), Workshop, Slate, Contour, Fusion Sheets, OSDK, Developer Console, Compass API
+- **Foundry Data & DevOps:** Pipeline Builder, Code Repositories & Workspaces (Python/PySpark transforms), Data Connection (batch, streaming, CDC), Media Sets, Restricted Views & Markings, Global Branching, Marketplace, multi-environment releases
+- **Data Engineering:** Python (advanced), PySpark, SQL, Spark, Polars, DuckDB, Pandas, Delta Lake, Databricks, Unity Catalog, incremental ETL and transformations, schema evolution, data quality and reconciliation, lineage and governance
+- **GenAI & LLM:** OpenAI, Claude, Gemini, Llama, vLLM, LangChain, LlamaIndex, embeddings, vector search (FAISS, Pinecone, Weaviate, Chroma), agentic workflows, MCP, tool calling, guardrails, hallucination mitigation, prompt optimisation, cost tracking
+- **LLM Evaluation:** LLM-as-a-judge, judge–expert alignment, critique shadowing, eval datasets, regression testing, release gates
+- **Cloud, MLOps & Databases:** AWS (SQS, Step Functions, S3), Azure (AKS, ML Studio, Functions, Key Vault, APIM), Kubernetes, Docker, KEDA, Redis, PostgreSQL, MySQL, MLflow, Arize Phoenix, Git, GitHub Actions, OAuth 2.0 / OpenID Connect
+- **ML & Document AI:** PyTorch, Scikit-learn, Sentence Transformers, Azure Form Recognizer, Azure Custom Vision, Mask R-CNN
+- **Domains:** employee benefits, payroll and KYC document verification, federal government contracting, insurance risk (research)
 
 ---
 
 ## Experience
 
 ### Lead AI/ML Engineer — Palantir Foundry & AIP
-**[Innovecture](https://www.innovect.com/)** (Client: [Aptia Group](https://www.aptia-group.com/)) · Remote, India · Dec 2025 – Present
+**[Innovecture](https://www.innovect.com/)** (Client: **[Aptia Group](https://www.aptia-group.com/)**) · Remote, India · December 2025 – Present
 
-Build an AI assistant that answers employees' benefits questions, automated checks for the documents they submit and a framework that tests the AI's answers. Serve as Platform Admin, providing L3 (top-level) production support across 5 environments.
+Lead the design, development, and production delivery of enterprise AI solutions on Palantir Foundry and AIP. Own technical architecture, implementation, platform operations, release engineering, and production reliability.
 
-**GenAI Benefits Assistant**
-- Raised coverage-answer accuracy from **68.9% to 97.9%** by replacing about 30 rigid lookup tables with a principle-based prompt on Gemini Flash, which also cut token cost 28% and worst-case response time 48%.
-- Reached **99.4%** routing accuracy by rebuilding the AI classifier that sorts each question into one of 26 topics.
-- Reduced made-up answers (hallucinations) in the assistant's document-based (RAG) replies by having it cite its sources and run an 11-point self-check before answering.
+#### AIP Copilot — Employee Benefits AI Assistant
 
-**AI Evaluation & Testing**
-- Designed a **532-question** test suite from real plan documents, including 388 questions written by business users, with an AI judge that must agree with human experts at least 90% of the time.
-- Built an AI document search (embedding-based RAG) that matches each test question to the right person and pages, and cut its workload **99.9%** by removing duplicate pages.
-- Found **85 of 182** business test questions that the source documents could not answer, using a keyword matcher, and removed a faulty matching step that produced 60 false matches.
-- Added analytics for accuracy, cost and speed on every test run, and a Helpfulness score that broke no existing tests.
+- Architected and built an enterprise AI assistant using **AIP Agent Studio, AIP Logic, Python Foundry Functions, and Foundry Ontology**.
+- Designed a hybrid architecture that combines structured Ontology queries with RAG over employer-specific benefit documents.
+- Built an intent-routing layer in AIP Logic to classify employee questions and direct them to the appropriate workflows.
+- Developed deterministic workflows using Python Foundry Functions to retrieve participant, enrollment, dependent, and plan information directly from the Ontology.
+- Built agentic workflows in AIP Agent Studio to handle complex questions requiring multiple data sources, document retrieval, and contextual reasoning.
+- Implemented semantic vector search to retrieve relevant passages from benefit documents and combine them with structured plan data.
+- Added streaming responses and source citations so employees can trace answers to their supporting documents.
+- Implemented source-priority rules and response-grounding controls to keep answers aligned with authoritative benefit information.
 
-**Document Verification Automation**
-- Stopped verification requests from getting stuck when a person's data was not yet available, with a readiness check across **22 automations** that retries every 15 minutes and escalates to manual review after 24 hours.
-- Replaced silent failures with a clear, auditable result for unsupported documents and clients excluded from AI review.
-- Made **24 of 36** untested document scenarios testable with a clone action that re-runs checks without re-uploading.
-- Built end-to-end load tests that measure response times (**p50–p99**), throughput and error rates at up to 250 times baseline load, from Foundry actions to AWS SQS delivery.
+#### AI Evaluation & Responsible AI
 
-**Data Engineering & Pipelines**
-- Replaced a failing Postgres data feed with an incremental Spark pipeline that matched the source exactly on **8M+ rows**.
-- Fixed recurring crashes in the Pendo analytics feed, which now finishes in **14.5 minutes**, by processing one day at a time and adapting to new columns automatically.
-- Corrected dependent-coverage counts that were **nearly three times** too high by switching to Foundry-calculated data.
-- Repaired and expanded the assistant's monitoring from 16 to 21 log sources, storing user messages only in hashed form.
+- Built **15+ AIP evaluation suites covering 800+ regression questions** to test classification, retrieval, answer accuracy, completeness, and safety.
+- Developed LLM-as-a-Judge workflows using Claude models to evaluate response quality, factual grounding, and policy adherence.
+- Established a **90% minimum evaluation quality threshold** as part of the release validation process.
+- Introduced binary evaluation criteria to make automated assessments more consistent and actionable.
+- Implemented parallel safety validators for legal, medical, tax, and financial-advice scenarios, with restricted requests routed to human support.
+- Built embedding-based evaluation workflows to map test questions to relevant document pages and improve retrieval debugging.
+- Developed an internal evaluation application that enables business stakeholders to submit test questions, run evaluations, and review results without engineering support.
+- Integrated regression evaluations into the release process to identify quality issues before production deployment.
 
-**Platform Engineering & DevOps**
-- Built a deployment-checking tool, backed by **158 unit tests**, that compares 36 types of Foundry resources across 5 environments and highlights differences in an interactive dashboard.
-- Made Foundry Marketplace packages install cleanly in every environment by removing hard-coded IDs and a dependency that broke the Stage environment (verified on **22.7M rows**).
-- Set up automatic email alerts for failed builds, data syncs and search indexing, with separate alerts for production.
-- Restored **70+ of 107** user actions, such as create, edit and delete, in the development environment.
-- Flagged two data-privacy risks and designed test pipelines to store document fingerprints instead of document content.
+#### Dependent Eligibility Verification — Document Intelligence
+
+- Built an automated document verification solution supporting **20 document types and 16 validation checks**.
+- Developed document-processing workflows to extract information, validate submitted details, and determine dependent eligibility.
+- Implemented validation rules to identify missing information, inconsistent details, name mismatches, and failed eligibility conditions.
+- Generated structured verification results with clear pass/fail outcomes and explanations for failed checks.
+- Designed human-in-the-loop workflows to route unsuccessful or inconclusive cases for manual review.
+- Reduced document verification processing time to approximately **one minute per case**, improving operational efficiency and auditability.
+- Implemented event-driven integrations to exchange verification outcomes with downstream systems.
+
+#### Palantir Foundry — Platform Engineering & Administration
+
+- Serve as a **Palantir Foundry Platform Administrator**, owning platform operations, application deployments, environment governance, and production support.
+- Manage application delivery across Development, UAT, Staging, Production, and Internal Production environments.
+- Develop and maintain Foundry data pipelines, datasets, Ontology integrations, and reusable deployment workflows.
+- Own release execution, from data modelling and pipeline development to incremental ingestion, packaging, deployment validation, and environment promotion.
+- Built automated monitoring and alerts for failed builds, data synchronization, and search-indexing operations.
+- Developed an Environment Health Check application to compare configurations and validate consistency across four environments.
+- Automated **158 validation tests across 36 resource types**, replacing manual pre-release checks with one-click HTML reports.
+- Provide L3 production support, resolving application failures, data issues, integration problems, and deployment-related incidents.
 
 ### Technical Lead — ML & AI
 **[TechnoMile](https://technomile.com/)** · Remote, India · Sept 2023 – Nov 2025
 
-- Built the AI extraction engine behind TechnoMile's **Contract Lifecycle Management** and **Pre-Award** products, pulling clauses, CLINs and sections out of long federal contract PDFs with **OpenAI, Claude and Llama** models. Raised CLIN accuracy from **58% to 90%** across 7 contract domains.
+- Built the LLM extraction engine for TechnoMile's **Contract Lifecycle Management** and **Pre-Award** products (**OpenAI, Claude, Llama**), raising CLIN accuracy on federal contracts from **58% to 90%** across 7 contract domains.
 - Shipped contract question-answering with **RAG**, chunking and embedding documents into a **FAISS/Chroma** vector store so answers are grounded in retrieved text rather than model memory.
-- Re-architected a monolithic extraction service into four independent CLIN, Clause, Section and Form services orchestrated with **AWS Step Functions**, cutting processing time **40%** through parallel chunk handling and asynchronous PDF-to-image conversion.
-- Built the review tooling for QA: a field-by-field accuracy report against ground truth (**Python, Plotly, DataTables**) and a viewer that boxes the exact PDF location each extracted value came from, so reviewers could catch fields the model invented.
-- Ran models in production with **MLflow** for experiment tracking and versioning and **Arize Phoenix** to trace prompts, token usage and latency.
-- Built Pre-Award Copilot features extracting clauses, deliverables and risk indicators from government solicitations, plus **Model Context Protocol (MCP)** agents that answer questions from internal APIs and databases in plain language.
+- Built Pre-Award **Copilot** features that extract clauses, deliverables and risk indicators from government solicitations, plus **Model Context Protocol (MCP)** agents that answer plain-language questions from internal APIs and databases.
+- Split a monolithic extraction service into four CLIN, Clause, Section and Form services orchestrated with **AWS Step Functions**, cutting CLIN processing time **40%** (370s to 220s) with parallel chunk handling.
+- Built QA tooling that scores each extracted field against ground truth and boxes its source location in the PDF, so reviewers catch invented fields. Tracked models with **MLflow** and **Arize Phoenix**.
 
 ### Senior Consultant
 **[Celebal Technologies](https://celebaltech.com/)** · Remote, India · Sept 2021 – Aug 2023
 
-Data science and ML engineering for enterprise clients: document intelligence, production ML infrastructure, and a forecasting platform built with Microsoft.
-
-- Led development of a payslip forgery detection method reaching **85.23% accuracy**, using **Azure Form Recognizer** for extraction.
-- Trained payslip classification and blur detection models on **Azure Custom Vision**, reaching **90.87%** and **95.72%** accuracy.
-- Built key information extraction and document similarity capabilities across client engagements, and a Hinglish language model for a client use case.
-- Architected a secure, high-throughput serving platform on **Redis, Kubernetes/AKS, Docker, Azure API Management, Key Vault and OAuth 2.0**, cutting processing time **10x**.
-- Moved long-running document work onto background workers behind a **Redis** queue, with **KEDA** autoscaling on Azure Kubernetes Service and containerised deployment via **Docker**.
-- Partnered with **Microsoft** to build a forecasting platform for energy portfolio management, adding training-loss monitoring across **DeepMC, TFT, N-BEATS and TCN** models with pipelines running on **Azure ML Studio** and **Azure Functions**.
-- Fine-tuned sentence-embedding models on retail catalog data to improve ad and product recommendations from search queries.
-- Mentored the team across document intelligence and language modelling, and supervised a computer-vision project counting exercise repetitions from mobile and IoT camera video.
+- Led payslip forgery detection for a payroll client (**85.23%** accuracy) with **Azure Form Recognizer** and tamper checks.
+- Built key-information extraction for KYC documents and receipts at **94%+** accuracy, and payslip classification and blur detection models on **Azure Custom Vision** at **90.87%** and **95.72%** accuracy.
+- Architected a secure serving platform on **Redis, AKS, Docker, Azure API Management, Key Vault and OAuth 2.0**, with queue workers autoscaled by **KEDA**, cutting processing time **10x**.
+- Partnered with **Microsoft** on a forecasting platform for energy portfolio management, adding training-loss monitoring across **DeepMC, TFT, N-BEATS and TCN** models with pipelines on **Azure ML Studio** and **Azure Functions**.
+- Fine-tuned a Spanish sentence-embedding model on Walmart Mexico catalog data on **Databricks**, adding **FLAN-T5** keyword generation and **FAISS** search to improve ad recommendations, validated against add-to-cart data.
 
 ### Machine Learning Engineer
 **[Konverge.AI](https://konverge.ai/)** · India · Aug 2018 – Aug 2021
 
 - Led a team of **10** on solution architecture and work breakdown for Smart Content Extraction.
 - Built data ingestion APIs with **Airbyte** connectors for the WEAV Core libraries.
-- Built a clustering-based method for extracting paragraphs and tables from documents.
-- Trained a **Mask R-CNN** model to classify fungus, yeast and bacteria at pixel level on stained nail-tissue images.
-- Built the backend for media analytics: keyword identification, clustering and recommendations.
-- Built a **GIS** system that maps geographic locations found in scanned government documents.
-
----
-
-## Projects
-
-**Contract Document AI — TechnoMile**
-- Trained a layout detection model on **Azure Custom Vision** to find CLIN tables in contract PDFs: **94%** accuracy on 50 annotated documents, rising above **98%** after scaling the training set to 264 with automated retraining.
-- Built a reusable ML pipeline library with separate training, inference and deployment components, deployable on **TorchServe, Ollama or VLLM**.
-- Wrote a verification tool that matches each extracted value back to its place in the document and scores confidence, so unsupported fields get caught.
-- Cut CLIN processing from **370s to 220s** with chunk-level parallelism, keeping memory flat by converting PDF pages to images one at a time.
-
-**Large Language Model Training**
-- Fine-tuned a Spanish sentence-embedding model (**Sentence Transformers**) on Walmart Mexico catalog data to improve ad recommendations from search queries.
-- Used **FLAN-T5 Large** to generate search keywords from product text, improving those recommendations further.
-- Used **FAISS** to make search lookups faster and lighter on memory.
-- Ran the work on **Databricks** and validated results against add-to-cart data.
-
-**Payslip Forgery Detection — Celebal Technologies**
-- Led the work end to end for a payroll client: research, architecture, engineering and monitoring.
-- Layered metadata and pixel-level checks on top of the forgery detector to catch manipulated documents that passed content extraction.
-- Built the **Flask** and **React** application, secured with **OAuth 2.0** and **OpenID Connect** behind **Azure API Management**, shipped through **GitHub Actions** to **Azure Container Apps**, with an **RQ dashboard** for queue visibility.
+- Built eKYC components that match faces across video frames and read identity cards with OCR.
 
 ---
 
@@ -133,10 +111,13 @@ Data science and ML engineering for enterprise clients: document intelligence, p
 
 ---
 
-## Certifications
+## Publications
 
-[STATSX0001: Statistical Learning, StanfordOnline](https://courses.edx.org/certificates/b51d9b57b98e40238921a7430ad46f73) · OAuth 2.0 · Docker · [Data Science](https://www.udemy.com/certificate/UC-FCRNNE54/)
+- [Dimensionality Reduction for Improving the Performance of Risk Calculation Using Machine Learning Algorithms](http://helix.dnares.in/2018/09/07/dimensionality-reduction-for-improving-the-performance-of-risk-calculation-using-machine-learning-algorithms/), HELIX, 2018
+- [Review on Application of Data Mining in Life Insurance](https://www.sciencepubco.com/index.php/ijet/article/view/20035), International Journal of Engineering & Technology, 2018
 
-## Achievements & Activities
+## Certifications, Achievements & Languages
 
-[Microsoft AI/ML competition (2022)](https://www.credly.com/badges/02d6cb29-e29e-44cc-8823-3533df0c423f?source=linked_in_profile) · [Artificial Intelligence and Machine Learning Workathon (2021)](https://www.credly.com/badges/74f831f7-aa06-4aa5-8a63-40e27ff0048c?source=linked_in_profile) · [Organized and led CSI events (2013–2016)](https://csiindia.org/) · [National Cadet Corps (NCC) cadet with 'A' certificate (2008–2009)](https://indiancc.mygov.in/)
+- **Certifications:** [Statistical Learning, StanfordOnline](https://courses.edx.org/certificates/b51d9b57b98e40238921a7430ad46f73) · OAuth 2.0 · Docker · [Data Science](https://www.udemy.com/certificate/UC-FCRNNE54/)
+- **Achievements:** [Microsoft AI/ML competition (2022)](https://www.credly.com/badges/02d6cb29-e29e-44cc-8823-3533df0c423f?source=linked_in_profile) · [Artificial Intelligence and Machine Learning Workathon (2021)](https://www.credly.com/badges/74f831f7-aa06-4aa5-8a63-40e27ff0048c?source=linked_in_profile)
+- **Languages:** English (C1 Advanced, professional working proficiency)
